@@ -1,23 +1,35 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Ocupa todo el ancho y alto de la ventana */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
+/* Ya no limita el ancho */
+#root {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo de logos */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* Animación */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -33,6 +45,7 @@
   }
 }
 
+/* Otros estilos */
 .card {
   padding: 2em;
 }
