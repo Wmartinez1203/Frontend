@@ -7,6 +7,8 @@ function GetUserById() {
 
   const URL = import.meta.env.VITE_API_GATEWAY;
 
+  console.log('API Gateway URL:', URL)
+  
   const fetchUser = async () => {
     try {
       const query = {

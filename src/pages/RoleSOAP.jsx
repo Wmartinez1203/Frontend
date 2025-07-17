@@ -8,6 +8,8 @@ function RoleSOAP() {
 
   const URL = import.meta.env.VITE_API_GATEWAY;
 
+  console.log('API Gateway URL:', URL)
+  
   const endpoints = {
     create: `${URL}/soap/roles/create`,
     delete: `${URL}/soap/roles/delete`,

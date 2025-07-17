@@ -6,6 +6,8 @@ function DeleteUser() {
 
   const URL = import.meta.env.VITE_API_GATEWAY;
 
+  console.log('API Gateway URL:', URL)
+  
   const handleDelete = async () => {
     try {
       await axios.delete(`${URL}/api/usuarios/delete/${id}`)
