@@ -10,8 +10,8 @@ RUN npm install
 
 COPY . .
 
-ARG VITE_API_URL
-ENV VITE_API_URL=$VITE_API_URL
+ARG VITE_API_GATEWAY
+ENV VITE_API_GATEWAY=$VITE_API_GATEWAY
 
 # Construir la app para producción
 RUN npm run build
