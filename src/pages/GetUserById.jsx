@@ -22,7 +22,7 @@ function GetUserById() {
           }
         `
       }
-      const res = await axios.post(`${URL}/graphql/aws`, query)
+      const res = await axios.post(`${URL}/graphql`, query)
       setUser(res.data.data.getUserById)
     } catch {
       alert('Error al obtener usuario')
