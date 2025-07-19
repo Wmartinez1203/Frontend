@@ -36,16 +36,18 @@ function RoleSOAP() {
 
   const createRole = () => {
     const xml = `
-      <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rol="http://schemas.datacontract.org/2004/07/RoleManagementService.Models">
-         <soapenv:Header/>
-         <soapenv:Body>
-            <tem:Create>
-               <tem:role>
-                  <rol:Nombre>${nombre}</rol:Nombre>
-                  <rol:Descripcion>${descripcion}</rol:Descripcion>
-               </tem:role>
-            </tem:Create>
-         </soapenv:Body>
+      <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+                        xmlns:tem="http://tempuri.org/" 
+                        xmlns:rol="http://schemas.datacontract.org/2004/07/RoleManagementService.Models">
+        <soapenv:Header/>
+        <soapenv:Body>
+          <tem:Create>
+            <tem:role>
+              <rol:Descripcion>${descripcion}</rol:Descripcion>
+              <rol:Nombre>${nombre}</rol:Nombre>
+            </tem:role>
+          </tem:Create>
+        </soapenv:Body>
       </soapenv:Envelope>`
     sendSOAP(endpoints.create, xml)
   }
