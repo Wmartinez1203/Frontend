@@ -70,9 +70,9 @@ function RoleSOAP() {
           <soapenv:Body>
             <tem:Update>
               <tem:role>
-                <rol:Descripcion>${descripcion}</rol:Descripcion>
-                <rol:Id>${id}</rol:Id>
-                <rol:Nombre>${nombre}</rol:Nombre>
+                <tem:Descripcion>${descripcion}</tem:Descripcion>
+                <tem:Id>${id}</tem:Id>
+                <tem:Nombre>${nombre}</tem:Nombre>
               </tem:role>
             </tem:Update>
           </soapenv:Body>
