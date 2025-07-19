@@ -36,7 +36,7 @@ function RoleSOAP() {
 
   const createRole = () => {
     const xml = `
-      <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rol="http://schemas.datacontract.org/2004/07/RoleManagementService.Models">>
+      <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rol="http://schemas.datacontract.org/2004/07/RoleManagementService.Models">
          <soapenv:Header/>
          <soapenv:Body>
             <tem:Create>
