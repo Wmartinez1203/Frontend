@@ -41,7 +41,6 @@ function RoleSOAP() {
          <soapenv:Body>
             <tem:Create>
                <tem:role>
-                  <tem:Id>0</tem:Id>
                   <tem:Nombre>${nombre}</tem:Nombre>
                   <tem:Descripcion>${descripcion}</tem:Descripcion>
                </tem:role>
@@ -66,18 +65,18 @@ function RoleSOAP() {
 
   const updateRole = () => {
     const xml = `
-      <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:rol="http://schemas.datacontract.org/2004/07/RoleManagementService.Models">
-         <soapenv:Header/>
-         <soapenv:Body>
+        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+          <soapenv:Header/>
+          <soapenv:Body>
             <tem:Update>
-               <tem:role>
-                  <rol:Id>${id}</rol:Id>
-                  <rol:Nombre>${nombre}</rol:Nombre>
-                  <rol:Descripcion>${descripcion}</rol:Descripcion>
-               </tem:role>
+              <tem:role>
+                <rol:Descripcion>${descripcion}</rol:Descripcion>
+                <rol:Id>${id}</rol:Id>
+                <rol:Nombre>${nombre}</rol:Nombre>
+              </tem:role>
             </tem:Update>
-         </soapenv:Body>
-      </soapenv:Envelope>`
+          </soapenv:Body>
+        </soapenv:Envelope> `
     sendSOAP(endpoints.update, xml)
   }
 
